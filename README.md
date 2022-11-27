@@ -1,22 +1,22 @@
-### EXP NO: 03
+### EX NO: 03
 
-### .
+### DATE: 19/09/2022
 
-# <p align = "center"> Convolutional Deep Neural Network for Digit Classification </p>
 
- 
+# <br><p align = "center"> Convolutional Deep Neural Network for Digit Classification </p>
+
 
 ## AIM
 
 To Develop a convolutional deep neural network for digit classification and to verify the response for scanned handwritten images.
-
+<br><br><br>
 ## Problem Statement and Dataset
 The MNIST dataset is a collection of handwritten digits. The task is to classify a given image of a handwritten digit into one of 10 classes representing integer values from 0 to 9, inclusively. The dataset has a collection of 60,000 handwrittend digits of size 28 X 28. Here we build a convolutional neural network model that is able to classify to it's appropriate numerical value.
 
 ![image](https://user-images.githubusercontent.com/75235293/190975763-7d3b7c0f-9458-41e9-a35c-aa063c4977da.png)
 
 
-## <br><br><br><br><br>Neural Network Model
+## <br><br><br>Neural Network Model
 ![Screenshot (423)](https://user-images.githubusercontent.com/75243072/191222827-1d87adfd-172e-41c9-af5f-6c6cfdd7d0ac.png)
 
 
@@ -43,10 +43,12 @@ Evaluate the model with the testing data
 ### STEP-10:
 Fit the model and predict the single input
 
-## PROGRAM
-```python
-# Developed By: Saran M
+## <br>PROGRAM
+```
+# Developed By: SARAN M
 # Register Number:212220230044
+```
+```python
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -101,7 +103,7 @@ metrics.plot()
 metrics[['loss','val_loss']].plot()
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
 print(confusion_matrix(y_test,x_test_predictions))
-img = image.load_img('seveni.jpeg')
+img = image.load_img('8.png')
 type(img)
 img_tensor = tf.convert_to_tensor(np.asarray(img))
 img_28 = tf.image.resize(img_tensor,(28,28))
@@ -119,24 +121,28 @@ plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 
 ### TrainingLoss, Validation Loss Vs Iteration Plot
 
- ![Screenshot 2022-09-23 210507](https://user-images.githubusercontent.com/75235427/191999641-13c39a3b-3ebf-44eb-a1a8-d0f59cd50c0d.jpg)
+ ![Screenshot (431)](https://user-images.githubusercontent.com/75235789/191796479-9ea7a130-9d8d-472c-ac6e-2cfab2b71c33.png)
 
 
 ### Classification Report
+![Screenshot (432)](https://user-images.githubusercontent.com/75235789/191796545-c69872ad-2d22-4304-aa46-58cbd31c2675.png)
 
-![Screenshot 2022-09-23 210535](https://user-images.githubusercontent.com/75235427/191999658-4d8cf20a-e6aa-4f30-9418-275f7cb6662a.jpg)
 
 
 ### Confusion Matrix
-![Screenshot 2022-09-23 210616](https://user-images.githubusercontent.com/75235427/191999670-644baeff-6be9-49d7-a611-981a5866c7b8.jpg)
 
-
-### New Sample Data Prediction
-![Screenshot 2022-09-23 210646](https://user-images.githubusercontent.com/75235427/191999688-9d108645-2941-4f66-83d0-facb50619144.jpg)
+![Screenshot (434)](https://user-images.githubusercontent.com/75235789/191796601-94166858-8368-420e-86a7-e49c3735b39e.png)
 
 
 
-## RESULT
+
+### <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>New Sample Data Prediction
+![Screenshot (433)](https://user-images.githubusercontent.com/75235789/191796653-33a7b07e-4d52-4346-b860-118a40f037ed.png)
+
+
+
+
+## <br><br><br><br><br>RESULT
 Thus,a convolutional deep neural network for digit classification is developed and the response for scanned handwritten images is verified.
 
 
